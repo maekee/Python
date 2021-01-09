@@ -6,7 +6,7 @@
 # They all work the same.. just a list with elements in the right order
 
 # example_script.ps1 just contains simple output based on optional parameters:
-# param( [string]$GivenName = "default_user", [string]$Title = "default_title", [string]$Tool = "default_tool" )
+# param( [string]$UserName = "default_user", [string]$Title = "default_title", [string]$Tool = "default_tool" )
 # "I am $GivenName, working as `"$Title`" and primarily with $Tool"
 
 import subprocess
@@ -54,7 +54,7 @@ execute_powershell = [
     powershell_exepolicy,
     "-File",
     powershell_script_path,
-    "-SamAccountName",
+    "-UserName",
     arg_username,
     "-Title",
     arg_title
